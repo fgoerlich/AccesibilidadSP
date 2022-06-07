@@ -197,7 +197,55 @@ knitr::include_graphics("./img/12_Cap2_Demo_Mapa2.3.jpg")
 
 ---
 
+class: inverse, center, middle
 
+### Si la población se ha multiplicado por 2.5 en el último siglo y
+
+### una gran parte del territorio ha mermado...
+
+<br/>
+
+### ¿Donde ha ido la población?
+
+---
+
+# A la costa...
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
+knitr::include_graphics("./img/13_Interior_Costa.jpg")
+```
+
+---
+
+# Al valle...
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
+knitr::include_graphics("./img/13_Interior_Costa.jpg")
+```
+
+---
+
+# A los municipios urbanos...
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
+knitr::include_graphics("./img/13_Interior_Costa.jpg")
+```
+
+---
+
+# A las capitales de provincia...
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
+knitr::include_graphics("./img/13_Interior_Costa.jpg")
+```
+
+---
+
+# A las áreas urbanas funcionales...
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
+knitr::include_graphics("./img/13_Interior_Costa.jpg")
+```
 
 ---
 
