@@ -26,25 +26,67 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center")
 knitr::include_graphics("./img/01_MonoFRA.jpg")
 ```
 
-<br>
+<br/>
 
-Cualquier ejercicio de accesibilidad (geográfica) tiene (al menos) 3 patas:
-
-1. un **origen** por parte de quien accede,
-
-1. una **ruta**, por algún medio de trasporte determinado, y
-
-1. un **destino** al centro donde se accede.
+El [trabajo](https://www.ivie.es/es_ES/ptproyecto/distribucion-la-poblacion-acceso-los-servicios-publicos/) trata de poner en relación la distribución de la población sobre el territorio con la dotación de (algunos) centros de servicios: Sanidad, educación no universitaria y oficinas bancarias.
 
 --
 
-Ya vimos como geocodificar destinos. ¡Como empezamos la casa por el tejado!, seguimos ahora con la determinación de la ruta para un **origen dado**. 
+<br/>
+
+Adopta una **perspectiva nacional**, una **escala local** (municipal) y un **enfoque geográfico**.
+
+???
+
+Mejorar la accesibilidad a los servicios de interés general, públicos y privados, es una parte importante tanto de las políticas sociales como de las políticas territoriales de cohesión social.
+
+La accesibilidad, entendida en un sentido amplio, tiene múltiples facetas y hace referencia a la facilidad con la que la población, dadas sus características y su distribución sobre el territorio, puede disfrutar de dichos servicios.
+
+Con muy pocas excepciones los estudios generales sobre accesibilidad geográfica a servicios de interés general son de ámbito local o a lo sumo regional. La razón es que, desafortunadamente, información amplia y completa sobre la localización de este tipo de servicios no está disponible con generalidad.
 
 ---
 
-# Preliminares (1/2)
+# El origen... ¡un artículo de prensa! `r icons::icon_style(icons::fontawesome("newspaper"), fill = "blue")`
 
-Los problemas de rutas pueden ser extremadamente complejos.
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "100%", fig.align = "center"}
+knitr::include_url("https://elpais.com/politica/2019/10/25/actualidad/1572027354_718725.html")
+```
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
+#knitr::include_graphics("./img/02_EL_Pais.jpg")
+```
+
+???
+
+**Objetivo**: Mejorar la base de datos y hacerse una idea la foto a nivel nacional.
+
+---
+
+# Antecedentes
+
+.pull-left[
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
+knitr::include_graphics("./img/03_cubierta_informe_delimitacion_areas_rurales_387.jpg")
+```
+
+]
+
+.pull-right[ 
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "90%", fig.align = "center"}
+knitr::include_graphics("./img/04_Capitulo_5_Mapa_5.8_Canejan.jpg")
+```
+
+]
+
+???
+
+Ya habíamos mirado el tema de la accesibilidad en el contexto de la discriminación entre municipios rurales accesibles y remotos al hilo de una literatura europea que hace énfasis en el mejor desempeño de los municicipios rurales cercanos a las ciudades frente a los municipios remotos.
+
+---
+
+# 
 
 ---
 
