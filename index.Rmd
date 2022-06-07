@@ -1,6 +1,6 @@
 ---
 title: "Distribución de la Población y Accesibilidad a los Servicios"
-subtitle: "🌎 <br/><br/>con _R_"
+subtitle: "_Territorios que decrecen_"
 author: "Francisco Goerlich"
 institute: "Universidad de Valencia e Ivie"
 date: "27/06/2022"
