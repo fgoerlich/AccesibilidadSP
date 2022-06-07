@@ -1,0 +1,63 @@
+---
+title: "Distribución de la Población y Accesibilidad a los Servicios"
+subtitle: "🌎 <br/><br/>con _R_"
+author: "Francisco Goerlich"
+institute: "Universidad de Valencia e Ivie"
+date: "27/06/2022"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include = FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center")
+#xaringanExtra::use_tachyons()
+#xaringanExtra::use_tile_view()
+```
+
+# Trabajo de referencia
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "100%", fig.align = "center"}
+knitr::include_graphics("./img/01_MonoFRA.jpg")
+```
+
+<br>
+
+Cualquier ejercicio de accesibilidad (geográfica) tiene (al menos) 3 patas:
+
+1. un **origen** por parte de quien accede,
+
+1. una **ruta**, por algún medio de trasporte determinado, y
+
+1. un **destino** al centro donde se accede.
+
+--
+
+Ya vimos como geocodificar destinos. ¡Como empezamos la casa por el tejado!, seguimos ahora con la determinación de la ruta para un **origen dado**. 
+
+---
+
+# Preliminares (1/2)
+
+Los problemas de rutas pueden ser extremadamente complejos.
+
+---
+
+background-image: url(https://www.ivie.es/wp-content/uploads/2017/02/logo.jpg), url(https://www.uv.es/recursos/fatwirepub/css/logoPeu.png)
+background-position: 95% 5%, 5% 95%
+background-size: 12%, 20%
+
+class: center, middle
+
+# ¡Gracias por la atención!
+
+## .green[¿Preguntas?]
+
+???
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
