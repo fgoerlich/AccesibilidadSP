@@ -86,7 +86,118 @@ Ya habíamos mirado el tema de la accesibilidad en el contexto de la discriminac
 
 ---
 
-# 
+# La importancia de la cercanía
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "80%", fig.align = "center"}
+knitr::include_graphics("./img/05_RPH_DistCapi.jpg")
+```
+
+???
+
+Una mirada a los datos muestra que los **municipios cercanos** a los grandes centros de servicio, _las ciudades_, tienden a mostrar **mejor desempeño** que los **municipios remotos**, alejados de los centros de servicios.
+
+Ya sea en términos de la **cercanía** a la **capital de provincia** más cercana...
+
+---
+
+# La importancia de la cercanía
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "80%", fig.align = "center"}
+knitr::include_graphics("./img/06_RPH_Dist10000.jpg")
+```
+
+???
+
+...o a un **municipio por encima de un determinado umbral**.
+
+Aproximadamente el mismo patrón se observa para otros tamaños de municipios.
+
+Si bien, la relación está lejos de ser lineal.
+
+---
+
+# Accesibilidad a los servicios
+
+Una aproximación cuantitativa a la accesibilidad puede adoptar diferentes enfoques y ser medida de distintas formas.
+
+--
+
+En general, la accesibilidad es una combinación de dos funciones diferentes:
+
+1. El **tipo de actividades** que se pueden/desean alcanzar.
+
+2. El **coste** en el que debemos incurrir para alcanzarlas. Coste del usuario o del prestatario.
+
+--
+
+Nos centramos en servicios muy concretos y generales: **Sanidad** `r icons::icon_style(icons::fontawesome("hospital"), fill = "blue")`, **Educación no universitaria** `r icons::icon_style(icons::fontawesome("school"), fill = "blue")` y **Oficinas Bancarias** `r icons::icon_style(icons::ionicons("cash"), fill = "blue")`.
+
+Y en el coste por parte del que accede al servicio en términos de distancia y/o tiempo de acceso.
+
+**No** consideramos el **coste de provisión**, ¡un olvido terriblemente importante!
+
+En la accesibilidad es uno de los ámbitos donde se hace más patente el **conflicto eficiencia-equidad**.
+
+???
+
+Una mayor provisión de servicios locales, especialmente en las zonas rurales más despobladas, contribuiría a reducir el déficit identificado en estas zonas frente a las zonas urbanas, y redundaría en mejoras sociales y de bienestar para algunos ciudadanos. Sin embargo, un aumento generalizado en la provisión de servicios públicos conllevaría perdidas de eficiencia, en tanto que dicho gasto elevaría el coste medio de los servicios por habitante. El mismo argumento se aplica a los servicios privados, que en el caso de no se rentables requirirían la intervención pública o, si se actúa vía la obligatoriedad en la provisión de dichos servicios, el reparto del coste entre todos los usuarios.
+
+Este equilibrio debe resolverse en el ámbito político, en tanto que éste refleja, en teoría, la agregación de las preferencias de los individuos, pero es aconsejable que las decisiones se basen en la evidencia empírica.
+
+---
+
+class: inverse, center, middle
+
+# Distribución de la población
+
+<br/>
+
+Sin **población**, `r icons::icon_style(icons::ionicons("people"), fill = "white")`, no hay servicios que prestar.
+
+???
+
+¡Debemos empezar por saber donde están los usuarios potenciales!
+
+---
+
+# Distribución de la población
+
+La población española se ha multiplicado por 2.5 veces en los últimos 120 años... ¡pero muchos lugares han perdido población!
+
+.center[**Variación absoluta de la población por municipios, 1900-2020**]
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "70%", fig.align = "center"}
+knitr::include_graphics("./img/07_Cap2_Demo_Mapa2.1.jpg")
+```
+
+???
+
+¡Estos son los territorios que decrecen!
+
+---
+
+class: center
+
+#### Densidad de población
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "50%", out.height = "50%", fig.show = "hold", fig.align = "default"}
+knitr::include_graphics(c("./img/08_Densidad_1900.jpg", "./img/09_Densidad_1950.jpg",
+                          "./img/10_Densidad_2001.jpg", "./img/11_Densidad_2020.jpg"))
+```
+
+---
+
+# ¡España está casi vacía!
+
+.center[**Grid de población 2011 con tamaño de celda 1km² x 1km²**]
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "80%", fig.align = "center"}
+knitr::include_graphics("./img/12_Cap2_Demo_Mapa2.3.jpg")
+```
+
+---
+
+
 
 ---
 
