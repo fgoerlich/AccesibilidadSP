@@ -17,8 +17,14 @@ output:
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center")
 #xaringanExtra::use_tachyons()
-#xaringanExtra::use_tile_view()
+xaringanExtra::use_tile_view()
 ```
+
+```{r library, include = FALSE}
+library(tidyverse)
+library(here)
+```
+
 
 # Trabajo de referencia
 
@@ -205,7 +211,7 @@ class: inverse, center, middle
 
 <br/>
 
-### ¿Donde ha ido la población?
+### _¿Donde ha ido la población?_
 
 ---
 
@@ -220,7 +226,7 @@ knitr::include_graphics("./img/13_Interior_Costa.jpg")
 # Al valle...
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
-knitr::include_graphics("./img/13_Interior_Costa.jpg")
+knitr::include_graphics("./img/14_Altimetria.jpg")
 ```
 
 ---
@@ -228,7 +234,7 @@ knitr::include_graphics("./img/13_Interior_Costa.jpg")
 # A los municipios urbanos...
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
-knitr::include_graphics("./img/13_Interior_Costa.jpg")
+knitr::include_graphics("./img/15_Degurba.jpg")
 ```
 
 ---
@@ -236,7 +242,7 @@ knitr::include_graphics("./img/13_Interior_Costa.jpg")
 # A las capitales de provincia...
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
-knitr::include_graphics("./img/13_Interior_Costa.jpg")
+knitr::include_graphics("./img/16_Capital.jpg")
 ```
 
 ---
@@ -244,7 +250,99 @@ knitr::include_graphics("./img/13_Interior_Costa.jpg")
 # A las áreas urbanas funcionales...
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "85%", fig.align = "center"}
-knitr::include_graphics("./img/13_Interior_Costa.jpg")
+knitr::include_graphics("./img/17_FUA.jpg")
+```
+
+---
+
+class: inverse, center, middle
+
+### ¿Ha acabado este proceso de concentración de la población?
+
+--
+
+### _¡Yo creo que no!_
+
+---
+
+# Estructura sociodemográfica actual
+
+La **principal particularidad demográfica** que ha dejado el éxodo rural de la segunda mitad siglo pasado es la **abundancia de lugares casi vacíos** y un notable proceso de **envejecimiento de la población** en amplias zonas de nuestro país.
+
+<br/>
+
+Este **proceso** no operó ni en todos los lugares, ni en todas las épocas de la misma forma, y **no** parece que esté **agotado**.
+
+<br/>
+
+¡Lo que llevamos de siglo XXI no ha conseguido revertir las tendencias previas!
+
+<br/>
+
+Debemos pues esperar que el proceso de concentración, y envejecimiento, de la población prosigua de forma lenta pero continuada en el tiempo.
+
+---
+
+#### .center[Indicadores demográficos por tamaño de municipio, 2021]
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "80%", fig.align = "center"}
+DemoTama <- read_csv(here("data", "IndDemo_TamaMuni.csv")) %>%
+  select(TamaMuni, N, Superficie, Altitud, POB, EM, PobM16, Pob65M, IE, TD, RM, PobEXT, PobMMR, RPH) %>%
+  mutate(Pob = 100*POB/sum(POB), .after = POB) %>%
+  rename(Municipios = N, `Superficie (km²)` = Superficie, `Altitud (m)` = Altitud, Población = POB, `Población (%)` = Pob,
+         `Edad Media` = EM, `Población menor de 16 años (%)` = PobM16, `Población de 65 años y más (%)` = Pob65M,
+         `Índice de envejecimiento` = IE, `Tasa de dependencia` = TD, `Ratio de masculinidad` = RM,
+         `Población Extranjera (%)`  = PobEXT, `Población nacida en el mismo municipio de residencia (%)` = PobMMR,
+         `Renta por Hogar (€)`  = RPH, `Tramos de población` = TamaMuni)
+
+DT::datatable(DemoTama, extensions = "FixedColumns",
+              options = list(dom = "rtip", pageLength = 4, scrollX = TRUE, fixedColumns = list(leftColumns = 2))) %>%
+  DT::formatRound("Municipios", digits = 0, mark = ".") %>%
+  DT::formatRound("Superficie (km²)", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Altitud (m)", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Edad Media", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población menor de 16 años (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población de 65 años y más (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Índice de envejecimiento", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Tasa de dependencia", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Ratio de masculinidad", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población Extranjera (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población nacida en el mismo municipio de residencia (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Renta por Hogar (€)", digits = 0, mark = ".", dec.mark = ",")
+```
+
+---
+
+#### .center[Indicadores demográficos por grado de urbanización, 2021]
+
+```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "80%", fig.align = "center"}
+DemoUrba <- read_csv(here("data", "IndDemo_DEGURBA.csv")) %>%
+  select(Descripcion, N, Superficie, Altitud, POB, EM, PobM16, Pob65M, IE, TD, RM, PobEXT, PobMMR, RPH) %>%
+  mutate(Pob = 100*POB/sum(POB), .after = POB) %>%
+  rename(Municipios = N, `Superficie (km²)` = Superficie, `Altitud (m)` = Altitud, Población = POB, `Población (%)` = Pob,
+         `Edad Media` = EM, `Población menor de 16 años (%)` = PobM16, `Población de 65 años y más (%)` = Pob65M,
+         `Índice de envejecimiento` = IE, `Tasa de dependencia` = TD, `Ratio de masculinidad` = RM,
+         `Población Extranjera (%)`  = PobEXT, `Población nacida en el mismo municipio de residencia (%)` = PobMMR,
+         `Renta por Hogar (€)`  = RPH, `Grado de urbanización` = Descripcion)
+
+DT::datatable(DemoUrba, extensions = "FixedColumns",
+              options = list(dom = "rti", pageLength = 4, scrollX = TRUE, fixedColumns = list(leftColumns = 2))) %>%
+  DT::formatRound("Municipios", digits = 0, mark = ".") %>%
+  DT::formatRound("Superficie (km²)", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Altitud (m)", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Edad Media", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población menor de 16 años (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población de 65 años y más (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Índice de envejecimiento", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Tasa de dependencia", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Ratio de masculinidad", digits = 0, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población Extranjera (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Población nacida en el mismo municipio de residencia (%)", digits = 1, mark = ".", dec.mark = ",") %>%
+  DT::formatRound("Renta por Hogar (€)", digits = 0, mark = ".", dec.mark = ",")
 ```
 
 ---
