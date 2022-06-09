@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Distribución de la Población y Accesibilidad a los Servicios</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Francisco Goerlich" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding/datatables.js"></script>
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
+    <link href="libs/dt-ext-fixedcolumns/css/fixedColumns.dataTables.min.css" rel="stylesheet" />
+    <script src="libs/dt-ext-fixedcolumns/js/dataTables.fixedColumns.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Distribución de la Población y Accesibilidad a los Servicios
+]
+.subtitle[
+## <em>Territorios que decrecen</em>
+]
+.author[
+### Francisco Goerlich
+]
+.institute[
+### Universidad de Valencia e Ivie
+]
+.date[
+### 27/06/2022
+]
+
+---
+
+
+
+
+
+
+
+# Trabajo de referencia
+
+&lt;img src="./img/01_MonoFRA.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+&lt;br/&gt;
+
+El [trabajo](https://www.ivie.es/es_ES/ptproyecto/distribucion-la-poblacion-acceso-los-servicios-publicos/) trata de poner en relación la distribución de la población sobre el territorio con la dotación de (algunos) centros de servicios: Sanidad, educación no universitaria y oficinas bancarias.
+
+--
+
+&lt;br/&gt;
+
+Adopta una **perspectiva nacional**, una **escala local** (municipal) y un **enfoque geográfico**.
+
+???
+
+Mejorar la accesibilidad a los servicios de interés general, públicos y privados, es una parte importante tanto de las políticas sociales como de las políticas territoriales de cohesión social.
+
+La accesibilidad, entendida en un sentido amplio, tiene múltiples facetas y hace referencia a la facilidad con la que la población, dadas sus características y su distribución sobre el territorio, puede disfrutar de dichos servicios.
+
+Con muy pocas excepciones los estudios generales sobre accesibilidad geográfica a servicios de interés general son de ámbito local o a lo sumo regional. La razón es que, desafortunadamente, información amplia y completa sobre la localización de este tipo de servicios no está disponible con generalidad.
+
+---
+
+# El origen... ¡un artículo de prensa! &lt;svg viewBox="0 0 576 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M552 64H112c-20.858 0-38.643 13.377-45.248 32H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h496c13.255 0 24-10.745 24-24V88c0-13.255-10.745-24-24-24zM48 392V144h16v248c0 4.411-3.589 8-8 8s-8-3.589-8-8zm480 8H111.422c.374-2.614.578-5.283.578-8V112h416v288zM172 280h136c6.627 0 12-5.373 12-12v-96c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v96c0 6.627 5.373 12 12 12zm28-80h80v40h-80v-40zm-40 140v-24c0-6.627 5.373-12 12-12h136c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H172c-6.627 0-12-5.373-12-12zm192 0v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0-144v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0 72v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;iframe src="https://elpais.com/politica/2019/10/25/actualidad/1572027354_718725.html" width="100%" height="400px" data-external="1"&gt;&lt;/iframe&gt;
+
+
+
+???
+
+**Objetivo**: Mejorar la base de datos y hacerse una idea la foto a nivel nacional.
+
+---
+
+# Antecedentes
+
+.pull-left[
+
+&lt;img src="./img/03_cubierta_informe_delimitacion_areas_rurales_387.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[ 
+
+&lt;img src="./img/04_Capitulo_5_Mapa_5.8_Canejan.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+???
+
+Ya habíamos mirado el tema de la accesibilidad en el contexto de la discriminación entre municipios rurales accesibles y remotos al hilo de una literatura europea que hace énfasis en el mejor desempeño de los municicipios rurales cercanos a las ciudades frente a los municipios remotos.
+
+---
+
+# La importancia de la cercanía
+
+&lt;img src="./img/05_RPH_DistCapi.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+
+???
+
+Una mirada a los datos muestra que los **municipios cercanos** a los grandes centros de servicio, _las ciudades_, tienden a mostrar **mejor desempeño** que los **municipios remotos**, alejados de los centros de servicios.
+
+Ya sea en términos de la **cercanía** a la **capital de provincia** más cercana...
+
+---
+
+# La importancia de la cercanía
+
+&lt;img src="./img/06_RPH_Dist10000.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+
+???
+
+...o a un **municipio por encima de un determinado umbral**.
+
+Aproximadamente el mismo patrón se observa para otros tamaños de municipios.
+
+Si bien, la relación está lejos de ser lineal.
+
+---
+
+# Accesibilidad a los servicios
+
+Una aproximación cuantitativa a la accesibilidad puede adoptar diferentes enfoques y ser medida de distintas formas.
+
+--
+
+En general, la accesibilidad es una combinación de dos funciones diferentes:
+
+1. El **tipo de actividades** que se pueden/desean alcanzar.
+
+2. El **coste** en el que debemos incurrir para alcanzarlas. Coste del usuario o del prestatario.
+
+--
+
+Nos centramos en servicios muy concretos y generales: **Sanidad** &lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M128 244v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12zm140 12h40c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12zm-76 84v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm76 12h40c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12zm180 124v36H0v-36c0-6.627 5.373-12 12-12h19.5V85.035C31.5 73.418 42.245 64 55.5 64H144V24c0-13.255 10.745-24 24-24h112c13.255 0 24 10.745 24 24v40h88.5c13.255 0 24 9.418 24 21.035V464H436c6.627 0 12 5.373 12 12zM79.5 463H192v-67c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v67h112.5V112H304v24c0 13.255-10.745 24-24 24H168c-13.255 0-24-10.745-24-24v-24H79.5v351zM266 64h-26V38a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v26h-26a6 6 0 0 0-6 6v20a6 6 0 0 0 6 6h26v26a6 6 0 0 0 6 6h20a6 6 0 0 0 6-6V96h26a6 6 0 0 0 6-6V70a6 6 0 0 0-6-6z"&gt;&lt;/path&gt;&lt;/svg&gt;, **Educación no universitaria** &lt;svg viewBox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"&gt;&lt;/path&gt;&lt;/svg&gt; y **Oficinas Bancarias** &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M448,400H64a16,16,0,0,1,0-32H448a16,16,0,0,1,0,32Z"&gt;&lt;/path&gt;  &lt;path d="M416,448H96a16,16,0,0,1,0-32H416a16,16,0,0,1,0,32Z"&gt;&lt;/path&gt;  &lt;path d="M32,272H16v48a32,32,0,0,0,32,32H96V336A64.07,64.07,0,0,0,32,272Z"&gt;&lt;/path&gt;  &lt;path d="M480,240h16V176H480a96.11,96.11,0,0,1-96-96V64H128V80a96.11,96.11,0,0,1-96,96H16v64c5,0,10.34,0,16,0a96.11,96.11,0,0,1,96,96v16H384V336A96.11,96.11,0,0,1,480,240ZM256,304a96,96,0,1,1,96-96A96.11,96.11,0,0,1,256,304Z"&gt;&lt;/path&gt;  &lt;circle cx="256" cy="208" r="64"&gt;&lt;/circle&gt;  &lt;path d="M416,336v16h48a32,32,0,0,0,32-32V272H480A64.07,64.07,0,0,0,416,336Z"&gt;&lt;/path&gt;  &lt;path d="M480,144h16V96a32,32,0,0,0-32-32H416V80A64.07,64.07,0,0,0,480,144Z"&gt;&lt;/path&gt;  &lt;path d="M96,80V64H48A32,32,0,0,0,16,96v48H32A64.07,64.07,0,0,0,96,80Z"&gt;&lt;/path&gt;&lt;/svg&gt;.
+
+Y en el **coste** por parte del que **accede al servicio** en términos de **distancia y/o tiempo de acceso**.
+
+**No** consideramos el **coste de provisión**, ¡un olvido terriblemente importante!
+
+En la accesibilidad es uno de los ámbitos donde se hace más patente el **conflicto eficiencia-equidad**.
+
+???
+
+Una mayor provisión de servicios locales, especialmente en las zonas rurales más despobladas, contribuiría a reducir el déficit identificado en estas zonas frente a las zonas urbanas, y redundaría en mejoras sociales y de bienestar para algunos ciudadanos. Sin embargo, un aumento generalizado en la provisión de servicios públicos conllevaría perdidas de eficiencia, en tanto que dicho gasto elevaría el coste medio de los servicios por habitante. El mismo argumento se aplica a los servicios privados, que en el caso de no se rentables requirirían la intervención pública o, si se actúa vía la obligatoriedad en la provisión de dichos servicios, el reparto del coste entre todos los usuarios.
+
+Este equilibrio debe resolverse en el ámbito político, en tanto que éste refleja, en teoría, la agregación de las preferencias de los individuos, pero es aconsejable que las decisiones se basen en la evidencia empírica.
+
+---
+
+class: inverse, center, middle
+
+# Distribución de la población
+
+&lt;br/&gt;
+
+Sin **población**, &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:white;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M336,256c-20.56,0-40.44-9.18-56-25.84-15.13-16.25-24.37-37.92-26-61-1.74-24.62,5.77-47.26,21.14-63.76S312,80,336,80c23.83,0,45.38,9.06,60.7,25.52,15.47,16.62,23,39.22,21.26,63.63h0c-1.67,23.11-10.9,44.77-26,61C376.44,246.82,356.57,256,336,256Zm66-88h0Z"&gt;&lt;/path&gt;  &lt;path d="M467.83,432H204.18a27.71,27.71,0,0,1-22-10.67,30.22,30.22,0,0,1-5.26-25.79c8.42-33.81,29.28-61.85,60.32-81.08C264.79,297.4,299.86,288,336,288c36.85,0,71,9,98.71,26.05,31.11,19.13,52,47.33,60.38,81.55a30.27,30.27,0,0,1-5.32,25.78A27.68,27.68,0,0,1,467.83,432Z"&gt;&lt;/path&gt;  &lt;path d="M147,260c-35.19,0-66.13-32.72-69-72.93C76.58,166.47,83,147.42,96,133.45,108.86,119.62,127,112,147,112s38,7.66,50.93,21.57c13.1,14.08,19.5,33.09,18,53.52C213.06,227.29,182.13,260,147,260Z"&gt;&lt;/path&gt;  &lt;path d="M212.66,291.45c-17.59-8.6-40.42-12.9-65.65-12.9-29.46,0-58.07,7.68-80.57,21.62C40.93,316,23.77,339.05,16.84,366.88a27.39,27.39,0,0,0,4.79,23.36A25.32,25.32,0,0,0,41.72,400h111a8,8,0,0,0,7.87-6.57c.11-.63.25-1.26.41-1.88,8.48-34.06,28.35-62.84,57.71-83.82a8,8,0,0,0-.63-13.39C216.51,293.42,214.71,292.45,212.66,291.45Z"&gt;&lt;/path&gt;&lt;/svg&gt;, no hay servicios que prestar.
+
+???
+
+¡Debemos empezar por saber donde están los usuarios potenciales!
+
+---
+
+# Distribución de la población
+
+La población española se ha multiplicado por 2.5 veces en los últimos 120 años... ¡pero muchos lugares han perdido población!
+
+.center[**Variación absoluta de la población por municipios, 1900-2020**]
+
+&lt;img src="./img/07_Cap2_Demo_Mapa2.1.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
+???
+
+¡Estos son los territorios que decrecen!
+
+---
+
+class: center
+
+#### Densidad de población
+
+&lt;img src="./img/08_Densidad_1900.jpg" width="50%" height="50%" /&gt;&lt;img src="./img/09_Densidad_1950.jpg" width="50%" height="50%" /&gt;&lt;img src="./img/10_Densidad_2001.jpg" width="50%" height="50%" /&gt;&lt;img src="./img/11_Densidad_2020.jpg" width="50%" height="50%" /&gt;
+
+---
+
+# ¡España está casi vacía!
+
+.center[**Grid de población 2011 con tamaño de celda 1km² x 1km²**]
+
+&lt;img src="./img/12_Cap2_Demo_Mapa2.3.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, center, middle
+
+### Si la población se ha multiplicado por 2.5 en el último siglo y
+
+### una gran parte del territorio ha mermado...
+
+&lt;br/&gt;
+
+### _¿Donde ha ido la población?_
+
+---
+
+# A la costa...
+
+&lt;img src="./img/13_Interior_Costa.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Al valle...
+
+&lt;img src="./img/14_Altimetria.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# A los municipios urbanos...
+
+&lt;img src="./img/15_Degurba.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# A las capitales de provincia...
+
+&lt;img src="./img/16_Capital.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# A las áreas urbanas funcionales...
+
+&lt;img src="./img/17_FUA.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# A Madrid...
+
+&lt;img src="./img/18_Madrid.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, center, middle
+
+### ¿Ha acabado este proceso de concentración de la población?
+
+--
+
+### _¡Yo creo que no!_
+
+---
+
+# Estructura sociodemográfica actual
+
+La **principal particularidad demográfica** que ha dejado el éxodo rural de la segunda mitad siglo pasado es la **abundancia de lugares casi vacíos** y un notable proceso de **envejecimiento de la población** en amplias zonas de nuestro país.
+
+&lt;br/&gt;
+
+Este **proceso** no operó ni en todos los lugares, ni en todas las épocas de la misma forma, y **no** parece que esté **agotado**.
+
+&lt;br/&gt;
+
+¡Lo que llevamos de siglo XXI no ha conseguido revertir las tendencias previas!
+
+&lt;br/&gt;
+
+Debemos pues esperar que el proceso de concentración, y envejecimiento, de la población prosigua de forma lenta pero continuada en el tiempo.
+
+---
+
+#### .center[Indicadores demográficos por tamaño de municipio, 2021]
+
+<div id="htmlwidget-eb0796adf28f4550b9ac" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-eb0796adf28f4550b9ac">{"x":{"filter":"none","vertical":false,"extensions":["FixedColumns"],"data":[["1","2","3","4","5","6","7","8","9","10","11"],["Hasta 100 hab.","De 101 a 500 hab.","De 501 a 1,000 hab.","De 1,001 a 2,000 hab.","De 2,001 a 5,000 hab.","De 5,001 a 10,000 hab.","De 10,001 a 20,000 hab.","De 20,001 a 50,000 hab.","De 50,001 a 100,000 hab","De 100,001 a 500,000 hab.","Más de 500,000 hab."],[1379,2614,1004,874,947,553,346,265,86,57,6],[3451338.9814,11060428.8348,6241630.2839,6875534.1085,7955339.7413,5156567.2428,3315119.7435,3600641.7835,1423200.9335,1157787.5017,235444.3734],[919.128353879623,729.213083397093,573.766932270916,512.073684210526,415.238648363252,359.03616636528,276.329479768786,218.71320754717,295.639534883721,267.438596491228,152.166666666667],[78172,651192,721010,1240089,2996629,3902355,4894070,7837738,6178689,11216339,7668824],[0.164971665042352,1.37425457327763,1.52159622642616,2.61704378972912,6.32398909640533,8.23540400573539,10.3282873245385,16.5405092363725,13.039305788631,23.6705997097358,16.1840385841062],[57.5717604363455,52.619534862182,49.2144262821376,47.8294408734034,45.0852889909071,43.5152818229772,43.1299004486593,42.3992059247026,42.4094675919583,43.9054520368095,44.2549313133559],[4.62569718057617,8.54340962419686,11.1625358871583,12.3303246783094,14.5292260069565,15.7530004317905,16.0169552131457,16.3513375925554,16.4375808525077,15.0499998261465,13.9717119600085],[39.2544645141483,32.6630241157754,27.6580075172328,25.6609807844437,21.5519171709277,18.960781374324,18.5517984009219,17.3085015089813,17.5238630719235,20.0367695733875,20.4645327627808],[848.617256637168,382.318366466549,247.775306586484,208.112774431517,148.334929614343,120.362983905339,115.825999099353,105.853734662427,106.608528524744,133.134683088684,146.471189939765],[78.1901071347162,70.0866376394443,63.453560336424,61.2677072889073,56.4483549483636,53.1716842642383,52.832179613653,50.7382536395331,51.4266906223217,54.051799725528,52.5232951913586],[136.505007109793,115.134956556213,108.071083714984,104.512306139547,101.991926063285,100.388982176143,98.8121812357946,98.1906345093846,95.6871596918002,92.7447110222722,89.3727565641181],[4.44276723123369,6.05197852553471,7.55884107016546,7.40293640214533,8.85491664133264,9.21963788532822,10.5069400315075,12.213613162369,13.1906299216549,10.6802674205906,14.8836249208484],[43.6294325333879,42.2297878352314,42.6838740100692,44.6701809305622,42.8996382268209,39.7877179293017,39.1121091443318,37.2690436960256,36.9000284688224,47.7511690757564,53.2180422969676],[24936.1027339488,24133.355729412,24427.4968055408,24798.422507065,25645.3905888493,27683.7346097092,28489.3347806765,28527.1651158427,31319.1278743891,30982.6098033514,36328.3019360125]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Tramos de población<\/th>\n      <th>Municipios<\/th>\n      <th>Superficie (km²)<\/th>\n      <th>Altitud (m)<\/th>\n      <th>Población<\/th>\n      <th>Población (%)<\/th>\n      <th>Edad Media<\/th>\n      <th>Población menor de 16 años (%)<\/th>\n      <th>Población de 65 años y más (%)<\/th>\n      <th>Índice de envejecimiento<\/th>\n      <th>Tasa de dependencia<\/th>\n      <th>Ratio de masculinidad<\/th>\n      <th>Población Extranjera (%)<\/th>\n      <th>Población nacida en el mismo municipio de residencia (%)<\/th>\n      <th>Renta por Hogar (€)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"rtip","pageLength":4,"scrollX":true,"fixedColumns":{"leftColumns":2},"columnDefs":[{"targets":15,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":14,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":13,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":12,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":11,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":10,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":9,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":8,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":7,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":6,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \".\", null);\n  }"},{"className":"dt-right","targets":[2,3,4,5,6,7,8,9,10,11,12,13,14,15]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render","options.columnDefs.4.render","options.columnDefs.5.render","options.columnDefs.6.render","options.columnDefs.7.render","options.columnDefs.8.render","options.columnDefs.9.render","options.columnDefs.10.render","options.columnDefs.11.render","options.columnDefs.12.render","options.columnDefs.13.render"],"jsHooks":[]}</script>
+
+---
+
+#### .center[Indicadores demográficos por grado de urbanización, 2021]
+
+<div id="htmlwidget-36ef6a4f3dfc6e149a9f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-36ef6a4f3dfc6e149a9f">{"x":{"filter":"none","vertical":false,"extensions":["FixedColumns"],"data":[["1","2","3"],["Urbano","Intermedio","Rural"],[220,1109,6802],[2538237.1825,10970873.4401,36963922.9057],[241.095454545455,297.076645626691,676.519464863276],[25563852,15506786,6314469],[53.9491279401353,32.7250205428469,13.3258515170178],[43.7109576337154,42.5991391647048,47.1542097889709],[15.0374481905153,16.2960848237668,12.8628868080594],[19.6591343119965,17.6156748406794,24.6033514457035],[130.734510689096,108.097589274867,191.273948164482],[53.1313426343212,51.3128500505749,59.9136165929078],[92.329916179814,99.1473033577852,104.756223945295],[11.8724869788794,12.0728628098692,8.4404563550791],[45.6663573236146,39.4678304066362,43.8204700981191],[32890.1151387311,28049.7408718979,25136.9736036199]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Grado de urbanización<\/th>\n      <th>Municipios<\/th>\n      <th>Superficie (km²)<\/th>\n      <th>Altitud (m)<\/th>\n      <th>Población<\/th>\n      <th>Población (%)<\/th>\n      <th>Edad Media<\/th>\n      <th>Población menor de 16 años (%)<\/th>\n      <th>Población de 65 años y más (%)<\/th>\n      <th>Índice de envejecimiento<\/th>\n      <th>Tasa de dependencia<\/th>\n      <th>Ratio de masculinidad<\/th>\n      <th>Población Extranjera (%)<\/th>\n      <th>Población nacida en el mismo municipio de residencia (%)<\/th>\n      <th>Renta por Hogar (€)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"rti","pageLength":4,"scrollX":true,"fixedColumns":{"leftColumns":2},"columnDefs":[{"targets":15,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":14,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":13,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":12,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":11,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":10,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":9,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":8,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":7,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":6,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \".\", \",\", null);\n  }"},{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \",\", null);\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \".\", \".\", null);\n  }"},{"className":"dt-right","targets":[2,3,4,5,6,7,8,9,10,11,12,13,14,15]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render","options.columnDefs.4.render","options.columnDefs.5.render","options.columnDefs.6.render","options.columnDefs.7.render","options.columnDefs.8.render","options.columnDefs.9.render","options.columnDefs.10.render","options.columnDefs.11.render","options.columnDefs.12.render","options.columnDefs.13.render"],"jsHooks":[]}</script>
+
+---
+
+# .center[Cara y cruz del fuerte proceso de concentración de la población]
+
+&lt;br/&gt;
+
+- Por una parte, genera amplias zonas del territorio con muy baja densidad demográﬁca, con una población mayor, envejecida y, en muchos lugares, con escasas perspectivas económicas. El llamado **reto demográﬁco**.
+
+&lt;br/&gt;
+
+- Por otra parte, **este patrón de localización facilita el acceso de una gran parte de la población a los servicios** sanitarios, educativos y de oficinas bancarias. La mayor parte de la población dispone de centros de servicios en sus municipios de residencia, y cuando ello no es así, los tiempos de acceso son, en su mayoría, razonables.
+
+???
+
+**Respecto a la despoblación**: En los casi 6.000 municipios que no superan los 2.000 habitantes, la renta por hogar se sitúa alrededor de un 20% por debajo del promedio nacional, frente al 20% por encima del promedio nacional que disfrutan los municipios de más de 500.000 habitantes. El rango en renta por hogar es, pues, considerable.
+
+**Respecto a los servicios**: La mayor parte de la población dispone de centros de servicios en sus municipios de residen-cia, y cuando ello no es así, los tiempos de acceso son, en su mayoría, razonables.
+
+Los casi 6.000 municipios que no superan los 2.000 habitantes albergan el 5,7% de la población, 2,7 millones de residentes, mientras que en los 6 municipios con más de 500.000 habitantes reside el triple de la población (16,2%), 7,6 millones de personas. Esta cifra asciende al 40%, 18,8 millones, si consideramos los municipios de más de 100.000 habitantes.
+
+Naturalmente la atomización de la distribución municipal --más de 1.300 municipios no sobrepasan los 100 habitantes-- deja una parte pequeña de la población con peor acceso a los servicios de interés general, tanto en dotaciones como en tiempos de acceso. Son además poblaciones de montaña, con una altitud media que supera los 900 metros, y peores comunicaciones. Sin embargo, el problema está suﬁcientemente acotado desde el punto de vista demográfico.
+
+Los casi 4.000 municipios que no superan los 500 habitantes albergan a una población inferior al millón de habitantes (solo el 1,6% del total de la población española).
+
+---
+
+class: inverse, center, middle
+
+## Examinemos una gran foto de la accesibilidad a Servicios Sanitarios, Educativos y de Oficinas Bancarias.
+
+---
+
+## Servicios Sanitarios: Hospitales &lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M128 244v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12zm140 12h40c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12zm-76 84v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm76 12h40c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12zm180 124v36H0v-36c0-6.627 5.373-12 12-12h19.5V85.035C31.5 73.418 42.245 64 55.5 64H144V24c0-13.255 10.745-24 24-24h112c13.255 0 24 10.745 24 24v40h88.5c13.255 0 24 9.418 24 21.035V464H436c6.627 0 12 5.373 12 12zM79.5 463H192v-67c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v67h112.5V112H304v24c0 13.255-10.745 24-24 24H168c-13.255 0-24-10.745-24-24v-24H79.5v351zM266 64h-26V38a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v26h-26a6 6 0 0 0-6 6v20a6 6 0 0 0 6 6h26v26a6 6 0 0 0 6 6h20a6 6 0 0 0 6-6V96h26a6 6 0 0 0 6-6V70a6 6 0 0 0-6-6z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- El 55% de la población reside en un municipio que dispone de hospital.
+
+- El 91% de la población reside en un municipio con hospital o se encuentra a menos de 30 minutos de viaje de alguno.
+
+- Alrededor de 1 millón de personas —el 2.1% de la población— tienen que invertir más de 45 minutos para llegar al hospital más cercano.
+
+- La geografía de las zonas con peor accesibilidad está claramente delimitada. Se trata de áreas montañosas, en ocasiones con comunicaciones difíciles.  También algunas áreas en las periferias provinciales —Guadalajara, Cuenca, Teruel, Badajoz o Huesca—, alejadas de la capital.
+
+- Cuando descendemos a nivel provincial las disparidades son mucho más elevadas.
+
+]
+
+???
+
+**Áreas montañosas con comunicaciones difíciles**: Picos de Europa, zonas del Pirineo, la Serranía de Cuenca, Montes de León, la Serranía de Gredos, la Sierra de Alcaraz y la vertiente sur de Sierra Nevada.
+
+---
+
+### .center[Tiempo de viaje al hospital más cercano]
+
+&lt;img src="./img/19_Cap4_Sani_Mapa4.7.jpg" width="98%" style="display: block; margin: auto;" /&gt;
+
+???
+
+Cometar las zonas con peor acceso. Los efectos frontera y el efecto de la lejanía de la capital.
+
+---
+
+## Servicios Sanitarios: Centros de Atención Primaria &lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M128 244v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12zm140 12h40c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12zm-76 84v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm76 12h40c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12zm180 124v36H0v-36c0-6.627 5.373-12 12-12h19.5V85.035C31.5 73.418 42.245 64 55.5 64H144V24c0-13.255 10.745-24 24-24h112c13.255 0 24 10.745 24 24v40h88.5c13.255 0 24 9.418 24 21.035V464H436c6.627 0 12 5.373 12 12zM79.5 463H192v-67c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v67h112.5V112H304v24c0 13.255-10.745 24-24 24H168c-13.255 0-24-10.745-24-24v-24H79.5v351zM266 64h-26V38a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v26h-26a6 6 0 0 0-6 6v20a6 6 0 0 0 6 6h26v26a6 6 0 0 0 6 6h20a6 6 0 0 0 6-6V96h26a6 6 0 0 0 6-6V70a6 6 0 0 0-6-6z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- Centros de Atención Primaria (CAP): presentes en la casi totalidad de los municipios. Solo unos 200 municipios carecen de ellos.
+
+- La mayoría de los CAP, unos 10.000, son Consultorios Locales con una atención muy limitada y normalmente discontinua. El pilar básico son los Centros de Salud (CS), algo más de 3.000.
+
+- Los CS están presentes en el 33% de los municipios que engloban al 88% de la población.
+
+- Por tanto, **el 77% de municipios carece de CS**. Ello afecta al **12% de la población** —unos 5,6 millones de personas—.
+
+- El 90% de la población tiene acceso a un CS en su municipio o en un tiempo de viaje de unos 10 minutos, y solo el 1,3% de la población debe desplazarse más de 20 minutos.
+
+- En los casos más extremos, unas 100.000 personas, de algo menos de 300 municipios, tienen un CS a más de 30 minutos.
+
+]
+
+---
+
+### .center[Tiempo de viaje al Centro de Salud más cercano]
+
+&lt;img src="./img/20_Cap4_Sani_Mapa4.4b.jpg" width="98%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### .center[Diferencias Provinciales: % de población sin CS en su municipio]
+
+&lt;img src="./img/21_mapa4.2a_pcpob_sincentro_CS.jpg" width="98%" style="display: block; margin: auto;" /&gt;
+
+???
+
+A nivel regional existen importantes diferencias en cuanto a cobertura, lo que se debe fundamentalmente a dos factores. A la propia demografía, muy dispar entre comunidades autónomas, y a las diferentes formas de organizar la prestación de servicios sanitarios de las distintas comunidades en uso de sus atribuciones. Así, las provincias con mayor población sin centro de salud en su municipio son León, Zamora, Salamanca, Ávila y Segovia en Castilla y León, Badajoz, Toledo, Teruel y Lleida. Si consideramos la población de 65 años y más debemos añadir Burgos, Soria, Guadalajara, Cuenca y Huesca.
+
+Este mapa muestra, por un lado, la existencia de patrones autonómicos claramente diferenciados, como es el caso de Galicia, don-de solo dos municipios carecen de centro de salud, pero también permite apreciar diferencias en el porcentaje de población sin centro de salud en el municipio de re-sidencia en provincias pertenecientes a una misma comunidad, como es el caso de Cataluña, Castilla y León, Andalucía, Aragón y Castilla-La Mancha.
+
+En el caso de Cataluña, destaca la provincia de Lleida con más de un 30% de la población sin centro de salud en su municipio de residencia (un 38,2% si se toma como referencia la población con 65 y más años) frente a Barcelona, donde este porcentaje desciende al 5,7% (5,3% en la población mayor). En Castilla y León, las diferencias entre provincias en el porcentaje de población que no tienen centro de salud en el municipio de residencia van desde porcentajes superiores al 30% en las provincias de Zamora, Segovia, Ávila, León y Salamanca (llegando a superar incluso el 40% en las dos primeras y el 50% en la primera cuando se considera la población mayor) hasta Valladolid, donde la población sin centro de salud representa el 18,5% de la población de la provincia.
+Otro ejemplo de diferencias importantes en la dotación de centros de salud se observa en Castilla-La Mancha. Mientras en la provincia de Toledo el 38,3% de la población no dispone de centro de salud en su municipio (un 40,7% en el caso de la población mayor), en Albacete este porcentaje apenas alcanza el 13% (el 18,3% en la población mayor). También hay diferencias sustanciales en las provincias de Anda-lucía —desde el casi 30% en Granada hasta el 5,2% de Cádiz— y Aragón —desde el 30,1% de Teruel hasta el 13,5% de Zaragoza—.
+
+---
+
+## Servicios Educativos: **¡Algunos números!**
+
+Al contrario que la Sanidad la Educación no se provee a toda la población.
+
+--
+
+- En casi 700 municipios no existe población entre los 3 y los 11 años.
+
+- ¡Y en casi 3.000 la población en esta franja de edad no supera los 20 alumnos!
+
+--
+
+- En casi 1.000 municipios no existe población entre los 12 y los 15 años. 
+
+- ¡En unos 3.500 la población en esta franja de edad no supera los 20 alumnos!
+
+--
+
+- En más de 1.300 municipios no existe población entre los 16 y los 17 años.
+
+- ¡Y en casi 4.000 la población en esta franja de edad no supera los 20 alumnos!
+
+--
+
+**Estas cifras permiten entender lo difícil que es prestar un servicio esencial con esta estructura demográfica.**
+
+???
+
+Cifras del Padrón de 2019.
+
+**Educación Secundaria**: Todos ellos rurales, la mayoría de montaña —con una altitud media de 922m— y con una población que en ningún caso supera los 400 habitantes.
+
+**Educación de Bachillerato**: Todos ellos rurales, la mayoría de montaña —con una altitud media de 902m— y con una población que en ningún caso supera los 800 habitantes. Más de la mitad de estos municipios se localizan en Castilla y León, lo que representa un tercio de sus municipios.
+
+---
+
+## Servicios Educativos: Centros de Primaria e Infantil Segundo Ciclo &lt;svg viewBox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- En más de la mitad de municipios, 56%, existen un centro de Educación Primaria.
+
+- Ello cubre la práctica totalidad de la población entre los 3 y los 11 años.
+
+- Solo unos 50,000 alumnos no disponen de un centro educativo en su municipio de residencia, el 1,2% de la población en este intervalo de edad.
+
+- El **tiempo medio de desplazamiento** a un municipio con centro educativo de este nivel es de unos **14 minutos**.
+
+- En solo **83 municipios** los **tiempos de desplazamiento superan los 30 minutos**, y los alumnos no alcanzan los 500.
+
+- La práctica totalidad de estos municipios son **rurales**.
+
+]
+
+???
+
+La educación privada está prácticamente ausente en el mundo rural.
+
+---
+
+### .center[Tiempo de viaje al Centro de Primaria más cercano]
+
+&lt;img src="./img/22_Cap5_Edu_Mapa5.3.jpg" width="98%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Servicios Educativos: Centros de Secundaria &lt;svg viewBox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- El 70% de los municipios no dispone de Centro de Educación Secundaria.
+
+- Ello afecta al 6,7% de la población entre los 12 y los 15 años de edad.
+
+- En términos absolutos ello representa unos 130.000 alumnos.
+
+- El 93% de estos alumnos, unos 120.000, disponen de un centro de Secundaria en un tiempo de acceso inferior a los 20 minutos.
+
+- El **tiempo medio de desplazamiento** a un municipio con centro educativo de este nivel es de unos **14 minutos**.
+
+- En solo **274 municipios** los **tiempos de desplazamiento superan los 30 minutos**, y los alumnos no alcanzan los 1.500.
+
+- El panorama es muy similar al de la educación primaria.
+
+]
+
+---
+
+### .center[Tiempo de viaje al Centro de Secundaria más cercano]
+
+&lt;img src="./img/23_Cap5_Edu_Mapa5.6.jpg" width="98%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Servicios Educativos: Centros de Bachillerato &lt;svg viewBox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- El 79% de los municipios no dispone de Centro de Educación Secundaria.
+
+- Ello afecta al 11% de la población entre los 16 y los 17 años de edad.
+
+- En términos absolutos ello representa unos 105.000 alumnos potenciales —aunque esta etapa educativa no es obligatoria—.
+
+- El 86% de estos alumnos, unos 90.000, disponen de un centro de Bachillerato en un tiempo de acceso inferior a los 20 minutos.
+
+- El **tiempo medio de desplazamiento** a un municipio con centro de Bachillerato es de unos **18 minutos**.
+
+- En **562 municipios** los **tiempos de desplazamiento superan los 30 minutos**, y los alumnos no alcanzan los 4.000.
+
+]
+
+---
+
+### .center[Tiempo de viaje al Centro de Bachillerato más cercano]
+
+&lt;img src="./img/24_Cap5_Edu_Mapa5.9.jpg" width="98%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### .center[Diferencias Provinciales: % de población sin Bachiller en su municipio]
+
+&lt;img src="./img/25_M5.8_pcpob_bachillerato.jpg" width="98%" style="display: block; margin: auto;" /&gt;
+
+???
+
+Las diferencias en la dotación de centros son notables cuando se considera la provincia como unidad territorial. A diferencia de los niveles de enseñanza básica y obligatoria, una mayor parte de la población de referencia debe desplazarse a otro municipio para atender este nivel de enseñanza, como resulta natural. Como se observa en el mapa, en una parte importante de las provincias españolas este porcentaje es superior al 20%, es decir, más de una quinta parte de la población con edad entre 16 y 17 años deben desplazarse a otro municipio si quieren recibir enseñanzas de bachillerato. La concentración geográfica de estas provincias simplemente intensifica las de anteriores niveles educativos, localizándose en el interior y norte peninsular, y superándose el 30% en 9 provincias, 4 de ellas de Castilla y León —Palencia, Salamanca, Segovia y Zamora—, además de Cáceres, Cuenca, Toledo, Teruel y Navarra. Únicamente en Murcia este porcentaje es inferior al 1%, seguida de Asturias, Madrid, Alicante, Cádiz y Las Palmas, con porcentajes inferiores al 5%. Asimismo, se observan diferencias importantes incluso dentro de algunas comunidades, como es el caso de Andalucía, Cataluña o Galicia.
+
+---
+
+# ¿Son nuestras estimaciones razonables?
+
+Es difícil encontrar estudios frente a los que comparar, pero **¡creemos que sí!**
+
+.panelset[
+
+.panel[.panel-name[Primaria]
+&lt;img src="./img/25_OECDPrimary.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+.panel[.panel-name[Secundaria]
+&lt;img src="./img/26_OECDSecondary.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+]
+
+???
+
+Datos de un estudio de la [OECD](https://www.oecd.org/publications/access-and-cost-of-education-and-health-services-4ab69cf3-en.htm)
+
+**Primaria**: La máxima distancia se obtiene para el mundo rural, pero, para España, es de solo 4km.
+
+**Secundaria**: La máxima distancia se obtiene para el mundo rural, pero, para España, es de solo 8km.
+
+Son distancias reducidas, ¡incluso algo más que las nuestras! Obtenidas con metodologías diferentes, pero que indican que nuestras estimaciones son perfectamente razonables, y no parece que sean conservadores, incluso aunque sean reducidas.
+
+---
+
+## Servicios Financieros: Oficinas Bancarias &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M448,400H64a16,16,0,0,1,0-32H448a16,16,0,0,1,0,32Z"&gt;&lt;/path&gt;  &lt;path d="M416,448H96a16,16,0,0,1,0-32H416a16,16,0,0,1,0,32Z"&gt;&lt;/path&gt;  &lt;path d="M32,272H16v48a32,32,0,0,0,32,32H96V336A64.07,64.07,0,0,0,32,272Z"&gt;&lt;/path&gt;  &lt;path d="M480,240h16V176H480a96.11,96.11,0,0,1-96-96V64H128V80a96.11,96.11,0,0,1-96,96H16v64c5,0,10.34,0,16,0a96.11,96.11,0,0,1,96,96v16H384V336A96.11,96.11,0,0,1,480,240ZM256,304a96,96,0,1,1,96-96A96.11,96.11,0,0,1,256,304Z"&gt;&lt;/path&gt;  &lt;circle cx="256" cy="208" r="64"&gt;&lt;/circle&gt;  &lt;path d="M416,336v16h48a32,32,0,0,0,32-32V272H480A64.07,64.07,0,0,0,416,336Z"&gt;&lt;/path&gt;  &lt;path d="M480,144h16V96a32,32,0,0,0-32-32H416V80A64.07,64.07,0,0,0,480,144Z"&gt;&lt;/path&gt;  &lt;path d="M96,80V64H48A32,32,0,0,0,16,96v48H32A64.07,64.07,0,0,0,96,80Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- La **población** que reside **en municipios sin oficina bancaria** ha aumentado del 2% en 2008 —cuando la red alcanzó su mayor dimensión— al **3% en 2019**.
+
+- En términos absolutos esto representa casi **1.4 millones de personas en 2019**, casi medio millón de personas más que en 2008.
+
+- La práctica totalidad de los municipios sin oficina son **rurales**.
+
+- El 99% de los municipios de menos de 100 habitantes carece de oficina, y en el rango entre los 100 y los 500 habitantes este porcentaje es todavía del 84%.
+
+- La distancia media de acceso de un municipio sin oficina a la oficina más cercana es de 8km, con un tiempo estimado de unos 11 minutos.
+
+- Las diferencias provinciales son importantes.
+
+]
+
+???
+
+¡Hay más población sin Centro de Salud en su municipio que sin oficina bancaria!
+
+Las estimaciones son acordes con las del Banco de España en su version de _work in progress_ de [_El Acceso a Servicios en la España Rural_](https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/21/Fich/do2122.pdf), en el que estiman ue la distancia que deben recorrer los ciudadanos de un municipio sin oficina bancaria a la oficina más cercana es de 7km.
+
+---
+
+### .center[Diferencias Provinciales: % Población sin oficina en su municipio]
+
+
+
+---
+
+#  Limitaciones del trabajo
+
+¡Muchas!, ¡quizá demasiadas!, pero se trataba de una **primera aproximación** a partir de un ejercicio nacional.
+
+--
+
+1. Examinamos un **eslabón en la cadena de accesibilidad**: la dotación de infraestructuras y su acceso geográfico.
+
+--
+
+2. Es necesario incorporar **servicios concretos** —Cardiología, Trauma, Urgencias, itinerarios educativos, horarios de atención,...—
+
+--
+
+3. Las bases de datos no son todo lo finas que deberían, ¡e incorporar servicios concretos es un desafío!
+
+--
+
+4. Los centros de servicios están georeferenciados. ¡En su sitio exacto! Pero la población está concentrada en un punto. ¡Sabemos que las ciudades son extensas y hay población dispersa dentro de los municipios rurales!
+
+--
+
+5. El tema más relevante son los **costes de provisión**.
+
+???
+
+1. Si hay dificultades generales de acceso no se deben a la distribución espacial de la red de centros, sino a otro tipo de cuestiones relacionadas con la disponibilidad de personal o con el flujo de organización de los servicios. Estos aspectos organizativos son una parte vital de la prestación de los servicios, sobre todo en lugares donde no existe un centro de servicios y las percepcio-nes de la población son importantes.
+
+2. ¿Cual es el horario del Consultorio Local? ¿Hay médico en Centro de Salud? ¿Hay servicio de urgencias? ¿Cual es el horario de la oficina bancaria?...
+
+3. Prometo no quejarme de la calidad de la información, pero esta es manifiestamente mejorable.
+
+4. Necesitamos una distribución más fina de la población. ¿Una grid? Ello complica enormemente los problemas computacionales.
+
+5. Los costes de provisión son esenciales anters aspectos prácticos del conflicto eficiencia-equidad.
+
+---
+
+# OECD: [_Access and Cost of Education and Health Services_](https://www.oecd.org/publications/access-and-cost-of-education-and-health-services-4ab69cf3-en.htm)
+
+¡Excelente estudio! Aunque la información de base es algo anticuada, 2011, y para mi gusto tiene excesiva cocina metodológica. lo que hace a veces dificil explorar el origen de los resultados.
+
+&lt;img src="./img/28_OECD.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+#  Conclusiones
+
+.panelset[
+
+.panel[.panel-name[Una]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- La accesibilidad geográfica a servicios básicos de interés general —sanidad, educación o entidades bancarias— es buena con generalidad para el conjunto de la población.
+
+- La mayor parte de la población tiene acceso básico a esos servi-cios en su propio municipio de residencia, y cuando ello no es así, tiene acceso al servicio en un tiempo razonable.
+
+]
+
+]
+
+.panel[.panel-name[Dos]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- Esta accesibilidad geográfica tiene, sin embargo, **dos velocidades**.
+
+- Una de crucero para la gran mayoría de la población.
+
+- Otra a cámara lenta para una parte muy reducida de la misma. Esta pequeña parte de la población debe desplazarse con tiempos relativamente largos, digamos en exceso a los 20 minutos para acceder a servicios básicos —centros de salud, centros educativos u oficinas bancarias— disponibles en mucho menor tiempo en cualquier municipio de tamaño medio. Tiempos mucho mayores, en exceso a los 45 minutos, para el acceso a un hospital.
+
+]
+
+]
+
+.panel[.panel-name[Tres]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- La población con peores condiciones de accesibilidad tiene características muy específica —es población mayor, que reside en municipios de tamaño muy reducido, normalmente de montaña y con malas comunicaciones—
+
+- Al mismo tiempo está muy localizada geográficamente en amplias zonas del interior peninsular.
+
+- Algunas provincias aparecen repetidamente entre las que muestran peores condiciones de accesibilidad independientemente del servicio: Teruel, Cuenca, Guadalajara y varias provincias de Castilla y León como Soria, Segovia o Ávila.
+
+- En cierta forma, y a grandes rasgos, el mapa de la accesibilidad es similar al mapa de la densidad de población.
+
+]
+
+]
+
+.panel[.panel-name[Cuatro]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- Esta dualidad, facilidad en el acceso geográfico a los centros de servicios para la gran mayoría de la población y dificultad para unos pocos, es el resultado, en gran parte, de nuestro modelo de asentamiento de la población.
+
+- La elevada concentración de la misma en unos pocos lugares facilita el acceso geográfico a los servicios públicos, al tiempo que acota en el espacio la población con peor acceso.
+
+]
+
+]
+
+.panel[.panel-name[Cinco]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
+
+- ¿Existe la denominada **penalización rural**? **Sí**, claramente.
+
+- Pero afortunamente está bastante acotada.
+
+- Estos colectivos vulnerables deberán recibir atención especial.
+
+- El principio de equidad territorial, así como la obligatoriedad por parte de las administraciones públicas de prestar los servicios públicos de sanidad y educación, requiere de atenciones correctoras para la población con peor acceso.
+
+]
+
+]
+
+]
+
+---
+
+background-image: url(https://www.ivie.es/wp-content/uploads/2017/02/logo.jpg), url(https://www.uv.es/recursos/fatwirepub/css/logoPeu.png)
+background-position: 95% 5%, 5% 95%
+background-size: 12%, 20%
+
+class: center, middle
+
+# ¡Gracias por la atención!
+
+## .green[¿Preguntas?]
+
+???
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
