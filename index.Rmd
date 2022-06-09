@@ -655,6 +655,8 @@ Son distancias reducidas, ¡incluso algo más que las nuestras! Obtenidas con me
 
 ???
 
+¡Hay más población sin Centro de Salud en su municipio que sin oficina bancaria!
+
 Las estimaciones son acordes con las del Banco de España en su version de _work in progress_ de [_El Acceso a Servicios en la España Rural_](https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/21/Fich/do2122.pdf), en el que estiman ue la distancia que deben recorrer los ciudadanos de un municipio sin oficina bancaria a la oficina más cercana es de 7km.
 
 ---
@@ -703,7 +705,6 @@ Las estimaciones son acordes con las del Banco de España en su version de _work
 
 5. Los costes de provisión son esenciales anters aspectos prácticos del conflicto eficiencia-equidad.
 
-
 ---
 
 # OECD: [_Access and Cost of Education and Health Services_](https://www.oecd.org/publications/access-and-cost-of-education-and-health-services-4ab69cf3-en.htm)
@@ -736,47 +737,59 @@ knitr::include_graphics("./img/28_OECD.jpg")
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
 
-- 
+- Esta accesibilidad geográfica tiene, sin embargo, **dos velocidades**.
+
+- Una de crucero para la gran mayoría de la población.
+
+- Otra a cámara lenta para una parte muy reducida de la misma. Esta pequeña parte de la población debe desplazarse con tiempos relativamente largos, digamos en exceso a los 20 minutos para acceder a servicios básicos —centros de salud, centros educativos u oficinas bancarias— disponibles en mucho menor tiempo en cualquier municipio de tamaño medio. Tiempos mucho mayores, en exceso a los 45 minutos, para el acceso a un hospital.
 
 ]
 
-
 ]
-
 
 .panel[.panel-name[Tres]
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
 
-- 
+- La población con peores condiciones de accesibilidad tiene características muy específica —es población mayor, que reside en municipios de tamaño muy reducido, normalmente de montaña y con malas comunicaciones—
+
+- Al mismo tiempo está muy localizada geográficamente en amplias zonas del interior peninsular.
+
+- Algunas provincias aparecen repetidamente entre las que muestran peores condiciones de accesibilidad independientemente del servicio: Teruel, Cuenca, Guadalajara y varias provincias de Castilla y León como Soria, Segovia o Ávila.
+
+- En cierta forma, y a grandes rasgos, el mapa de la accesibilidad es similar al mapa de la densidad de población.
 
 ]
 
 ]
-
 
 .panel[.panel-name[Cuatro]
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
 
-- 
+- Esta dualidad, facilidad en el acceso geográfico a los centros de servicios para la gran mayoría de la población y dificultad para unos pocos, es el resultado, en gran parte, de nuestro modelo de asentamiento de la población.
+
+- La elevada concentración de la misma en unos pocos lugares facilita el acceso geográfico a los servicios públicos, al tiempo que acota en el espacio la población con peor acceso.
 
 ]
 
 ]
-
 
 .panel[.panel-name[Cinco]
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
 
-- 
+- ¿Existe la denominada **penalización rural**? **Sí**, claramente.
+
+- Pero afortunamente está bastante acotada.
+
+- Estos colectivos vulnerables deberán recibir atención especial.
+
+- El principio de equidad territorial, así como la obligatoriedad por parte de las administraciones públicas de prestar los servicios públicos de sanidad y educación, requiere de atenciones correctoras para la población con peor acceso.
 
 ]
 
 ]
-
-
 
 ]
 
