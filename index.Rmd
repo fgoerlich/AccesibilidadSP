@@ -489,7 +489,7 @@ Al contrario que la Sanidad la Educación no se provee a toda la población.
 
 --
 
-**Estas cifras permiten entender lo difícil que es prestar un servicio esencial con esta estructura demográfica.**
+**Estas cifras permiten entender lo difícil que es prestar un servicio esencial con esta estructura demográfica y de asentamientos.**
 
 ???
 
@@ -664,7 +664,7 @@ Las estimaciones son acordes con las del Banco de España en su version de _work
 ### .center[Diferencias Provinciales: % Población sin oficina en su municipio]
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "98%", fig.align = "center"}
-#knitr::include_graphics("./img/27_.jpg")
+knitr::include_graphics("./img/27_M6_2_pob_excluida_2020.jpg")
 ```
 
 ---
@@ -785,7 +785,7 @@ knitr::include_graphics("./img/28_OECD.jpg")
 
 - Estos colectivos vulnerables deberán recibir atención especial.
 
-- El principio de equidad territorial, así como la obligatoriedad por parte de las administraciones públicas de prestar los servicios públicos de sanidad y educación, requiere de atenciones correctoras para la población con peor acceso.
+- El principio de equidad territorial, así como la obligatoriedad por parte de las administraciones públicas de prestar ciertos servicios públicos, requiere acciones correctoras para la población con peor acceso.
 
 ]
 
@@ -807,4 +807,4 @@ class: center, middle
 
 ???
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+Slides created via the _R_ package [**xaringan**](https://github.com/yihui/xaringan).
