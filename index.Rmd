@@ -363,7 +363,7 @@ DT::datatable(DemoUrba, extensions = "FixedColumns",
 
 <br/>
 
-- Por una parte, genera amplias zonas del territorio con muy baja densidad demográﬁca, con una población mayor, envejecida y, en muchos lugares, con escasas perspectivas económicas. El llamado **reto demográﬁco**.
+- Por una parte, genera amplias zonas del territorio con muy baja densidad demográﬁca, con una población mayor, envejecida y, en muchos lugares, con escasas perspectivas económicas. El llamado [**reto demográﬁco**](https://twitter.com/IUCAunizar/status/1539187621615636480?t=7FyAyqreU8dfpLDneEQHwQ&s=09).
 
 <br/>
 
@@ -419,7 +419,7 @@ knitr::include_graphics("./img/19_Cap4_Sani_Mapa4.7.jpg")
 
 ???
 
-Cometar las zonas con peor acceso. Los efectos frontera y el efecto de la lejanía de la capital.
+Comentar las zonas con peor acceso. Los efectos frontera y el efecto de la lejanía de la capital.
 
 ---
 
@@ -489,8 +489,6 @@ Al contrario que la Sanidad la Educación no se provee a toda la población.
 - En más de 1.300 municipios no existe población entre los 16 y los 17 años.
 
 - ¡Y en casi 4.000 la población en esta franja de edad no supera los 20 alumnos!
-
---
 
 **Estas cifras permiten entender lo difícil que es prestar un servicio esencial con esta estructura demográfica y de asentamientos.**
 
@@ -786,7 +784,7 @@ knitr::include_graphics("./img/28_OECD.jpg")
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
 
-- ¿Existe la denominada **penalización rural**? **Sí**, claramente.
+- ¿Existe la denominada **penalización rural**? **Sí**, claramente, pero sobre todo en la **rural remota**.
 
 - Pero afortunamente está bastante acotada.
 
