@@ -1,6 +1,6 @@
 ---
 title: "Distribución de la Población y Accesibilidad a los Servicios"
-subtitle: "_Territorios que decrecen_"
+subtitle: "_Lugares que encogen: análisis y estrategias_\n**XVII Jornadas de Economía Pública - Universidad de Zaragoza**"
 author: "Francisco Goerlich"
 institute: "Universidad de Valencia e Ivie"
 date: "27/06/2022"
