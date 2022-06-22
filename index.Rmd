@@ -69,6 +69,8 @@ knitr::include_url("https://elpais.com/politica/2019/10/25/actualidad/1572027354
 
 ---
 
+exclude: true
+
 # Antecedentes
 
 .pull-left[
