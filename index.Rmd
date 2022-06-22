@@ -95,6 +95,8 @@ Ya habíamos mirado el tema de la accesibilidad en el contexto de la discriminac
 
 ---
 
+exclude: true
+
 # La importancia de la cercanía
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "80%", fig.align = "center"}
@@ -108,6 +110,8 @@ Una mirada a los datos muestra que los **municipios cercanos** a los grandes cen
 Ya sea en términos de la **cercanía** a la **capital de provincia** más cercana...
 
 ---
+
+exclude: true
 
 # La importancia de la cercanía
 
