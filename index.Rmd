@@ -26,7 +26,6 @@ library(tidyverse)
 library(here)
 ```
 
-
 # Trabajo de referencia
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "100%", fig.align = "center"}
@@ -132,8 +131,6 @@ Si bien, la relación está lejos de ser lineal.
 # Accesibilidad a los servicios
 
 Una aproximación cuantitativa a la accesibilidad puede adoptar diferentes enfoques y ser medida de distintas formas.
-
---
 
 En general, la accesibilidad es una combinación de dos funciones diferentes:
 
@@ -531,6 +528,8 @@ La educación privada está prácticamente ausente en el mundo rural.
 
 ---
 
+exclude: true
+
 ### .center[Tiempo de viaje al Centro de Primaria más cercano]
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "98%", fig.align = "center"}
@@ -560,6 +559,8 @@ knitr::include_graphics("./img/22_Cap5_Edu_Mapa5.3.jpg")
 ]
 
 ---
+
+exclude: true
 
 ### .center[Tiempo de viaje al Centro de Secundaria más cercano]
 
