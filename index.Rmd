@@ -1,6 +1,6 @@
 ---
 title: "Distribución de la Población y Accesibilidad a los Servicios"
-subtitle: "_Lugares que encogen: análisis y estrategias_\n**XVII Jornadas de Economía Pública - Universidad de Zaragoza**"
+subtitle: "_Lugares que encogen: análisis y estrategias_<br/><br/>XVII Jornadas de Economía Pública - Zaragoza"
 author: "Francisco Goerlich"
 institute: "Universidad de Valencia e Ivie"
 date: "27/06/2022"
@@ -739,9 +739,9 @@ knitr::include_graphics("./img/28_OECD.jpg")
 
 - Esta accesibilidad geográfica tiene, sin embargo, **dos velocidades**.
 
-- Una de crucero para la gran mayoría de la población.
+- Una de **crucero** para la gran mayoría de la población.
 
-- Otra a cámara lenta para una parte muy reducida de la misma. Esta pequeña parte de la población debe desplazarse con tiempos relativamente largos, digamos en exceso a los 20 minutos para acceder a servicios básicos —centros de salud, centros educativos u oficinas bancarias— disponibles en mucho menor tiempo en cualquier municipio de tamaño medio. Tiempos mucho mayores, en exceso a los 45 minutos, para el acceso a un hospital.
+- Otra a **cámara lenta** para una parte muy reducida de la misma. Esta pequeña parte de la población debe desplazarse con tiempos relativamente largos, digamos en exceso a los 20 minutos para acceder a servicios básicos —centros de salud, centros educativos u oficinas bancarias— disponibles en mucho menor tiempo en cualquier municipio de tamaño medio. Tiempos mucho mayores, en exceso a los 45 minutos, para el acceso a un hospital.
 
 ]
 
@@ -751,7 +751,7 @@ knitr::include_graphics("./img/28_OECD.jpg")
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt4[
 
-- La población con peores condiciones de accesibilidad tiene características muy específica —es población mayor, que reside en municipios de tamaño muy reducido, normalmente de montaña y con malas comunicaciones—
+- La población con peores condiciones de accesibilidad tiene características muy específicas —es población mayor, que reside en municipios de tamaño muy reducido, normalmente de montaña y con malas comunicaciones—
 
 - Al mismo tiempo está muy localizada geográficamente en amplias zonas del interior peninsular.
 
