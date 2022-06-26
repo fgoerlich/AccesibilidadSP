@@ -199,7 +199,7 @@ knitr::include_graphics(c("./img/08_Densidad_1900.jpg", "./img/09_Densidad_1950.
 
 # ¡España está casi vacía!
 
-.center[**Grid de población 2011 con tamaño de celda 1km² x 1km²**]
+.center[**Grid de población 2011 con tamaño de celda 1km x 1km**]
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "80%", fig.align = "center"}
 knitr::include_graphics("./img/12_Cap2_Demo_Mapa2.3.jpg")
@@ -363,7 +363,7 @@ DT::datatable(DemoUrba, extensions = "FixedColumns",
 
 <br/>
 
-- Por una parte, genera amplias zonas del territorio con muy baja densidad demográﬁca, con una población mayor, envejecida y, en muchos lugares, con escasas perspectivas económicas. El llamado [**reto demográﬁco**](https://twitter.com/IUCAunizar/status/1539187621615636480?t=7FyAyqreU8dfpLDneEQHwQ&s=09).
+- Por una parte, genera amplias zonas del territorio con muy baja densidad demográﬁca, con una población mayor, envejecida y, en muchos lugares, con escasas perspectivas económicas. Es el llamado [**reto demográﬁco**](https://twitter.com/IUCAunizar/status/1539187621615636480?t=7FyAyqreU8dfpLDneEQHwQ&s=09).
 
 <br/>
 
@@ -714,7 +714,7 @@ knitr::include_graphics("./img/27_M6_2_pob_excluida_2020.jpg")
 
 # OECD: [_Access and Cost of Education and Health Services_](https://www.oecd.org/publications/access-and-cost-of-education-and-health-services-4ab69cf3-en.htm)
 
-¡Excelente estudio! Aunque la información de base es algo anticuada, 2011, y para mi gusto tiene excesiva cocina metodológica. lo que hace a veces dificil explorar el origen de los resultados.
+¡Excelente estudio! Aunque la información de base es algo anticuada, 2011, y para mi gusto tiene excesiva cocina metodológica. Ello hace a veces dificil explorar el verdadero origen de los resultados.
 
 ```{r, echo = FALSE, eval = TRUE, fig.asp = 2/2, out.width = "100%", fig.align = "center"}
 knitr::include_graphics("./img/28_OECD.jpg")
